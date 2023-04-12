@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Highest Value</title>
+</head>
+<body>
+     <!-- if,elseif,else condition -->
+   
+	<h1>Check Highest Value</h1>
+
+	<label for="value1">Enter A value:</label>
+	<input type="text" id="value1">
+	<br><br>
+
+	<label for="value2">Enter B value:</label>
+	<input type="text" id="value2">
+	<br><br>
+    
+	<button onclick="check_value()">Check</button>
+	<p id="result"></p>
+
+	<script>
+		function check_value() {
+			let value1 = document.getElementById("value1").value;
+			let value2 = document.getElementById("value2").value;
+
+			if (value1 > value2) {
+				document.getElementById("result").innerHTML = value1 + " " + " A is greater";
+
+			} else if (value1 < value2) {
+				document.getElementById("result").innerHTML = value2 + " " + "B is greater";
+
+			} else {
+				document.getElementById("result").innerHTML = "Both values are equal";
+			}
+		}
+	</script>
+    
+</body>
+</html>
